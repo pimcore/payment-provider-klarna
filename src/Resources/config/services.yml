@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        public: false
+        autowire: true
+        autoconfigure: true
+
+    Pimcore\Bundle\EcommerceFrameworkBundle\PaymentManager\Payment\Klarna:
+        arguments:
+            $options: []
+        tags:
+            - { name: pimcore_ecommerce.payment.provider, key: 'klarna' }

@@ -1,0 +1,27 @@
+{
+  "name": "pimcore/payment-provider-klarna",
+  "license": "GPL-3.0+",
+  "type": "pimcore-bundle",
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "klarna/checkout": "^3.0.0",
+    "pimcore/pimcore": "^6.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pimcore\\Bundle\\EcommerceFrameworkBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "Pimcore\\Bundle\\EcommerceFrameworkBundle\\PimcorePaymentProviderKlarnaBundle"
+      ]
+    },
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
