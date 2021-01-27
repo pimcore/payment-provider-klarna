@@ -2,6 +2,7 @@
   "name": "pimcore/payment-provider-klarna",
   "license": "GPL-3.0+",
   "type": "pimcore-bundle",
+  "description": "Pimcore Payment Provider - Klarna",
   "config": {
     "sort-packages": true
   },
