@@ -1,14 +1,29 @@
 # Pimcore E-Commerce Framework Payment Provider - Klarna
 
-* [Documentation](https://www.developers.klarna.com/en/de/kco-v2/klarna-checkout-overview-v1)
+### Official Klarna Documentation
+* [Klarna Documentation](https://www.developers.klarna.com/en/de/kco-v2/klarna-checkout-overview-v1)
 * [Test card numbers](https://www.developers.klarna.com/en/de/kco-v2/test-credentials)
-
-Install Klarna SDK: `composer require klarna/checkout`
 
 Test E-Mail Accounts
 - klarna@green.com -> Open Invoice without selection of payment method
 - klarna@yellow.com -> selection of payment methods: open invoice + credit cart
 - klarna@red.com -> only credit card
+
+## Requirements
+ - klarna/checkout
+
+## Installation
+
+Install latest version with Composer:
+```bash 
+composer require pimcore/payment-provider-klarna
+```
+
+Enable bundle via console or extensions manager in Pimcore backend:
+```bash
+php bin/console pimcore:bundle:enable PimcorePaymentProviderKlarnaBundle
+```
+## Configuration
 
 ```php
 <?php
