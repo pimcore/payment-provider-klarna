@@ -20,9 +20,6 @@
       "bundles": [
         "Pimcore\\Bundle\\EcommerceFrameworkBundle\\PimcorePaymentProviderKlarnaBundle"
       ]
-    },
-    "branch-alias": {
-      "dev-master": "1.0-dev"
     }
   }
 }
