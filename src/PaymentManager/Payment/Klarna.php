@@ -157,7 +157,11 @@ class Klarna extends AbstractPayment implements PaymentInterface
     }
 
     /**
-     * @inheritdoc
+     * Handles response of payment provider and creates payment status object
+     *
+     * @param StatusInterface|array $response
+     *
+     * @return StatusInterface
      */
     public function handleResponse($response)
     {
