@@ -207,6 +207,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
         );
     }
 
+
     /**
      * @return array
      */
@@ -222,6 +223,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
     {
         $this->authorizedData = $authorizedData;
     }
+
 
     /**
      * @param PriceInterface|null $price
