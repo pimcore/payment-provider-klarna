@@ -108,7 +108,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
      *
      * @param PriceInterface $price
      * @param array $config
-     * @param CartInterface  $cart
+     * @param null|CartInterface  $cart
      *
      * @return string
      *
@@ -207,8 +207,9 @@ class Klarna extends AbstractPayment implements PaymentInterface
         );
     }
 
+
     /**
-     * @inheritdoc
+     * @return array
      */
     public function getAuthorizedData()
     {
@@ -223,8 +224,14 @@ class Klarna extends AbstractPayment implements PaymentInterface
         $this->authorizedData = $authorizedData;
     }
 
+
     /**
-     * @inheritdoc
+     * @param PriceInterface|null $price
+     * @param string|null $reference
+     *
+     * @return StatusInterface
+     *
+     * @throws \Exception
      */
     public function executeDebit(PriceInterface $price = null, $reference = null)
     {
