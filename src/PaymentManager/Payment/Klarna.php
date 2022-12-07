@@ -154,7 +154,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
      *
      * @return StatusInterface
      */
-    public function handleResponse(StatusInterface|array $response): StatusInterface
+    public function handleResponse(StatusInterface | array $response): StatusInterface
     {
         // check required fields
         $required = [
@@ -198,7 +198,6 @@ class Klarna extends AbstractPayment implements PaymentInterface
         );
     }
 
-
     public function getAuthorizedData(): array
     {
         return $this->authorizedData;
@@ -211,7 +210,6 @@ class Klarna extends AbstractPayment implements PaymentInterface
     {
         $this->authorizedData = $authorizedData;
     }
-
 
     /**
      * @throws \Exception
