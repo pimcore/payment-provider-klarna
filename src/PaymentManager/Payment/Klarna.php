@@ -283,7 +283,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
     }
 
     /**
-     * @param string $uri
+     * @param string|null $uri
      *
      * @return \Klarna_Checkout_Order
      */
