@@ -22,9 +22,6 @@ class PimcorePaymentProviderKlarnaBundle extends AbstractPimcoreBundle
 {
     use PackageVersionTrait;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function getComposerPackageName(): string
     {
         return 'pimcore/payment-provider-klarna';
