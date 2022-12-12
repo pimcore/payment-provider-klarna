@@ -10,6 +10,9 @@
     "klarna/checkout": "^3.0.0",
     "pimcore/pimcore": "^10.0.0"
   },
+  "require-dev": {
+    "phpstan/phpstan": "^1.9"
+  },
   "autoload": {
     "psr-4": {
       "Pimcore\\Bundle\\EcommerceFrameworkBundle\\": "src/"
