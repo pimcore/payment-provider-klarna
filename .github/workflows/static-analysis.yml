@@ -17,7 +17,7 @@ jobs:
         strategy:
             matrix:
                 include:
-                    - { php-version: 8.0, database: "mariadb:10.7", pimcore_version: "", dependencies: lowest, experimental: false }
+                    - { php-version: 8.1, database: "mariadb:10.7", pimcore_version: "", dependencies: lowest, experimental: false }
                     - { php-version: 8.1, database: "mariadb:10.7", pimcore_version: "", dependencies: highest, experimental: false }
         steps:
             - name: "Checkout code"

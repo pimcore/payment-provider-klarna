@@ -95,10 +95,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
         return $resolver;
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName(): string
     {
         return 'Klarna';
     }
@@ -106,15 +103,9 @@ class Klarna extends AbstractPayment implements PaymentInterface
     /**
      * Start payment
      *
-     * @param PriceInterface $price
-     * @param array $config
-     * @param null|CartInterface  $cart
-     *
-     * @return string
-     *
      * @throws \Exception
      */
-    public function initPayment(PriceInterface $price, array $config, CartInterface $cart = null)
+    public function initPayment(PriceInterface $price, array $config, ?CartInterface $cart = null): string
     {
         // check params
         $required = [
@@ -163,7 +154,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
      *
      * @return StatusInterface
      */
-    public function handleResponse($response)
+    public function handleResponse(StatusInterface | array $response): StatusInterface
     {
         // check required fields
         $required = [
@@ -207,10 +198,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
         );
     }
 
-    /**
-     * @return array
-     */
-    public function getAuthorizedData()
+    public function getAuthorizedData(): array
     {
         return $this->authorizedData;
     }
@@ -224,14 +212,9 @@ class Klarna extends AbstractPayment implements PaymentInterface
     }
 
     /**
-     * @param PriceInterface|null $price
-     * @param string|null $reference
-     *
-     * @return StatusInterface
-     *
      * @throws \Exception
      */
-    public function executeDebit(PriceInterface $price = null, $reference = null)
+    public function executeDebit(?PriceInterface $price = null, ?string $reference = null): StatusInterface
     {
         if ($price) {
             // TODO or not ?
@@ -266,28 +249,17 @@ class Klarna extends AbstractPayment implements PaymentInterface
     /**
      * Executes credit
      *
-     * @param PriceInterface $price
-     * @param string $reference
-     * @param string $transactionId
-     *
-     * @return StatusInterface
-     *
      * @throws \Exception
      *
      * @see http://developers.klarna.com/en/at+php/kco-v2/order-management-api#introduction
      */
-    public function executeCredit(PriceInterface $price, $reference, $transactionId)
+    public function executeCredit(PriceInterface $price, string $reference, string $transactionId): StatusInterface
     {
         // TODO: Implement executeCredit() method.
         throw new \Exception('not implemented');
     }
 
-    /**
-     * @param string|null $uri
-     *
-     * @return \Klarna_Checkout_Order
-     */
-    public function createOrder($uri = null)
+    public function createOrder(?string $uri = null): \Klarna_Checkout_Order
     {
         // init
         $connector = \Klarna_Checkout_Connector::create(
