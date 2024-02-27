@@ -55,7 +55,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
         );
     }
 
-    protected function processOptions(array $options)
+    protected function processOptions(array $options): void
     {
         parent::processOptions($options);
 
@@ -206,7 +206,7 @@ class Klarna extends AbstractPayment implements PaymentInterface
     /**
      * @inheritdoc
      */
-    public function setAuthorizedData(array $authorizedData)
+    public function setAuthorizedData(array $authorizedData): void
     {
         $this->authorizedData = $authorizedData;
     }
