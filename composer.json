@@ -11,6 +11,7 @@
   "require": {
     "php": "~8.3.0 || ~8.4.0",
     "klarna/checkout": "^3.0.0",
+    "pimcore/ecommerce-framework-bundle": "^2.0",
     "pimcore/pimcore": "^12"
   },
   "require-dev": {
