@@ -10,10 +10,10 @@
   "minimum-stability": "dev",
   "require": {
     "klarna/checkout": "^3.0.0",
-    "pimcore/pimcore": "^11"
+    "pimcore/pimcore": "^12"
   },
   "require-dev": {
-    "phpstan/phpstan": "^1.9"
+    "phpstan/phpstan": "^2.1"
   },
   "autoload": {
     "psr-4": {
