@@ -23,6 +23,9 @@
     }
   },
   "extra": {
+    "branch-alias": {
+      "dev-2026.x": "2026.1.x-dev"
+    },
     "pimcore": {
       "bundles": [
         "Pimcore\\Bundle\\EcommerceFrameworkBundle\\PimcorePaymentProviderKlarnaBundle"
