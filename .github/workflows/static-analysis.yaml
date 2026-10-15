@@ -23,7 +23,9 @@ on:
 
 env:
   PIMCORE_PROJECT_ROOT: ${{ github.workspace }}
-  PRIVATE_REPO: ${{ github.event.repository.private }}
+  # This repo is public, but pimcore/ecommerce-framework-bundle ^2.0 and its dependencies are only
+  # served by the private Pimcore packagist, so the private package authentication must always be set up.
+  PRIVATE_REPO: "true"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
