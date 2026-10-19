@@ -9,7 +9,7 @@
   "prefer-stable": true,
   "minimum-stability": "dev",
   "require": {
-    "php": "~8.5.0",
+    "php": "~8.4.0 || ~8.5.0",
     "klarna/checkout": "^3.0.0",
     "pimcore/ecommerce-framework-bundle": "^2026.3",
     "pimcore/pimcore": "^2026.3"
